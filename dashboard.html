@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthWatch Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img class="sidebar-logo" src="logo.png" alt="HealthWatch logo" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link active">Dashboard</a>
+        <a href="disease-report.html" class="sidebar-link">Disease Report</a>
+        <a href="#" class="sidebar-link">Case Reporting</a>
+        <a href="#" class="sidebar-link">Analytics</a>
+        <a href="#" class="sidebar-link">Interactive Map</a>
+        <a href="#" class="sidebar-link">Health Facilities</a>
+        <a href="#" class="sidebar-link">Health Alerts</a>
+        <a href="#" class="sidebar-link">Users</a>
+        <a href="#" class="sidebar-link">Settings</a>
+      </nav>
+      <a class="logout-button" href="login.html">Log Out</a>
+    </aside>
+    <aside class="sidebar-drawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <img class="sidebar-logo" src="logo.png" alt="HealthWatch logo" />
+          <button class="drawer-close" type="button">✕</button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="dashboard.html" class="drawer-link active">Dashboard</a>
+          <a href="disease-report.html" class="drawer-link">Disease Report</a>
+          <a href="#" class="drawer-link">Case Reporting</a>
+          <a href="#" class="drawer-link">Analytics</a>
+          <a href="#" class="drawer-link">Interactive Map</a>
+          <a href="#" class="drawer-link">Health Facilities</a>
+          <a href="#" class="drawer-link">Health Alerts</a>
+          <a href="#" class="drawer-link">Users</a>
+          <a href="#" class="drawer-link">Settings</a>
+        </nav>
+        <a class="logout-button" href="login.html">Log Out</a>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <button class="menu-toggle" id="drawerToggle">☰</button>
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="search" placeholder="Search anything" aria-label="Search anything" />
+        </div>
+        <div class="user-card">
+          <div class="user-avatar">TR</div>
+          <div>
+            <p class="user-name">Taiwo Rahimat</p>
+            <p class="user-role">Health Officer</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="dashboard-title">
+        <h1>Dashboard</h1>
+        <p>Overview of disease surveillance and reports</p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-label">Total Reported cases</p>
+          <p class="stat-value">12,458</p>
+          <p class="stat-meta">12.0% from last week</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Active Outbreaks</p>
+          <p class="stat-value">35</p>
+          <p class="stat-meta">0.2% from last week</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Resolved Cases</p>
+          <p class="stat-value">9,205</p>
+          <p class="stat-meta">15.2% from last week</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Deaths</p>
+          <p class="stat-value">219</p>
+          <p class="stat-meta">-0.2% from last week</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Today’s Report</p>
+          <p class="stat-value">39</p>
+          <p class="stat-meta">1.2% from yesterday</p>
+        </article>
+      </section>
+
+      <section class="charts-row">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h2>Cases by Gender</h2>
+          </div>
+          <div class="donut-chart">
+            <div class="donut-center">12,458<br /><span>Total</span></div>
+          </div>
+          <div class="legend-list">
+            <div><span class="legend-color male"></span>Male 10,234 [45%]</div>
+            <div><span class="legend-color female"></span>Female 5,234 [34%]</div>
+            <div><span class="legend-color children"></span>Children 5,234 [34%]</div>
+            <div><span class="legend-color unknown"></span>Unknown 2,345 [24%]</div>
+          </div>
+        </div>
+
+        <div class="alert-card">
+          <div class="card-header">
+            <h2>Recent Alerts</h2>
+          </div>
+          <ul class="alert-list">
+            <li><strong>Cholera</strong> outbreak detected in Kano state <span>2h ago</span></li>
+            <li><strong>Malaria</strong> cases rising in Abuja <span>3h ago</span></li>
+            <li><strong>Covid 19</strong> trend rising in 4 LGAs <span>1h ago</span></li>
+          </ul>
+          <a class="view-alerts" href="https://ncdc.gov.ng/data">View all alerts</a>
+        </div>
+      </section>
+
+      <section class="table-row">
+        <div class="table-card">
+          <h2>Total Diseases</h2>
+          <table>
+            <thead>
+              <tr><th>Disease</th><th>Total Cases</th><th>Active Cases</th><th>Trend</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Malaria</td><td>5,343</td><td>3,124</td><td>High</td></tr>
+              <tr><td>Cholera</td><td>3,230</td><td>1,423</td><td>Low</td></tr>
+              <tr><td>Covid 19</td><td>1,239</td><td>50</td><td>High</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
